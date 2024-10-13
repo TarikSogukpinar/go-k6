@@ -27,10 +27,6 @@ func main() {
 		return c.SendString("Hello, World!")
 	})
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello, World!")
-	})
-
 	app.Get("/products", func(c *fiber.Ctx) error {
 		var products []models.Product
 		database.DB.Find(&products)

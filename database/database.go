@@ -14,7 +14,7 @@ var DB *gorm.DB
 
 func InitDB() {
 
-	dsn := "host=k6-demo.chueimam6prd.eu-north-1.rds.amazonaws.com user=postgres password=49Js2cPBl274t dbname=postgres port=5432 sslmode=require"
+	dsn := ""
 	var err error
 	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
